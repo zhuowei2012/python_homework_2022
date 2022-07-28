@@ -265,11 +265,12 @@ def save_to_file(area, lines):
         for line in lines:
             f.write(line + "\n")
 
-# get_links_from(1)
-projectLinks = get_project_links("蓬江区")
-print("*"*56)
-print(projectLinks)
-items_urls = get_item_all_info(projectLinks)
-#get_detail(items_urls)
-#get_project_links()
-# get_classify_url()
+if __name__ == "__main__":
+    # get_links_from(1)
+    projectLinks = get_project_links("蓬江区")
+    print("*"*56)
+    print(projectLinks)
+    items_urls = get_item_all_info(projectLinks)
+    #get_detail(items_urls)
+    #get_project_links()
+    # get_classify_url()

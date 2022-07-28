@@ -2,6 +2,7 @@
 import os
 import prettytable
 from stat_data import StatData
+import grab
 
 grab_dir = "d:\\grab_data\\"
 analys_dir = "d:\\stat_data\\"
@@ -45,6 +46,15 @@ def get_area_nums_price(begin, end):
     return info_list,top_list
 
 if __name__ == '__main__':
+
+    #先抓取信息: 注意这部分最好单独执行，耗时很久；获取后再执行后面的数据分析过程
+    '''
+    projectLinks = grab.get_project_links("XX区")
+    print("*" * 56)
+    print(projectLinks)
+    items_urls = grab.get_item_all_info(projectLinks)
+    '''
+    
     begin = "2022/6/1"
     end = "2022/6/30"
 
